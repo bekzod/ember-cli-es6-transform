@@ -9,15 +9,15 @@ module.exports = {
 
   es6Transform,
 
-  init() {
-    this._super.init && this._super.init.apply(this, arguments);
+//   init() {
+//     this._super.init && this._super.init.apply(this, arguments);
 
-    let checker = new VersionChecker(this);
-    let dep = checker.for('@babel/core').assertAbove('7.0.0', `
-The current version of ember-cli-es6-transform@${this.pkg.version} is for \
-Babel 7 and greater. Use versions below "1.0.0" for Babel 6.
-    `)
-  },
+//     let checker = new VersionChecker(this);
+//     let dep = checker.for('@babel/core').assertAbove('7.0.0', `
+// The current version of ember-cli-es6-transform@${this.pkg.version} is for \
+// Babel 7 and greater. Use versions below "1.0.0" for Babel 6.
+//     `)
+//   },
 
   importTransforms() {
     const babel = this.project.findAddonByName('ember-cli-babel');
